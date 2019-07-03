@@ -1,0 +1,37 @@
+<html>
+<body>
+
+<form action="http://127.0.0.1:8081/example-add" method="GET">
+    姓名: <input type="text" name="first_name">  <br>
+     
+    留言: <input type="text" name="last_name">
+    <input type="submit" value="Submit" id="b01">
+    </form>
+    <div>
+        {{each top}}
+            <p>编号：{{$value.id}}--姓名： {{$value.title}}--留言： {{$value.smalltext}}</p>
+        {{/each}}
+    </div>
+    <!-- <script src="./jquery-2.1.1.min.js"></script> -->
+<script>
+    // $(".button").click(function(){
+    //     $.post("http://127.0.0.1:8081/example-list",
+    //     {
+    //         first_name:"Donald Duck",
+    //         last_name:"Duckburg"
+    //     },
+    //     function(data,status){
+    //         alert("Data: " + data + "\nStatus: " + status);
+    //     });
+    // });
+</script>
+<!-- 选择一个文件上传: <br />
+<form action="/file_upload" method="post" enctype="multipart/form-data">
+<input type="file" name="image" size="50" />
+<br />
+<input type="submit" value="上传文件" />
+</form> -->
+
+
+</body>
+</html>
